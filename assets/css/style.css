@@ -1,0 +1,31 @@
+.site-header {
+    width: 100%;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.brand img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.site-header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
