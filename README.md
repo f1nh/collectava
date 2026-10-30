@@ -1,11 +1,6 @@
 # Collectava
 
-A full stack ecommerce web app for **Collectava**, a custom PC building business. The project starts with an accessible landing page (semantic HTML and CSS) and will grow into a complete full stack application as part of a Full Stack Engineering course.
-
-<!-- Add a screenshot after you build the page: -->
-<!-- ![Collectava landing page](frontend/images/screenshot.png) -->
-
-**Live demo:** _add your link here_
+A full stack ecommerce web app for **Collectava**, a custom PC building business. The project is being built step by step as part of a Full Stack Engineering course.
 
 ## About
 
@@ -15,32 +10,32 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, accessibility (WCAG, ARIA, keyboard navigation) | In progress |
-| 2 | Frontend: styling, responsive layout, JavaScript | Planned |
+| 1 | Landing page: semantic HTML, styling, and accessibility | In progress |
+| 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
 
 ## Features
 
-### Phase 1: landing page (current)
+### Implemented
 
-- **Header** with the logo and a navigation menu
-- **Hero section** with a headline, subheading, and call-to-action button
-- **Product showcase** with images, titles, descriptions, and prices for featured builds and services
-- **Customer testimonials** to build trust
-- **Newsletter signup form** to capture email addresses
-- **Footer** with important links, contact information, and social media icons
+- Semantic header with a logo icon, the Collectava brand name, and primary navigation
+- Responsive header layout that places navigation on a second row on small screens
+- Sticky header styling and Google Fonts (Chakra Petch and Inter)
+- Semantic navigation landmark with a descriptive accessible name
 
-### Later phases (planned)
+### Planned
 
+- Landing-page sections for the hero, product showcase, testimonials, newsletter signup, and footer content
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
 - _More features to be decided as the project grows_
 
 ## Accessibility
 
-- [ ] Semantic landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
-- [ ] Logical heading order (one `<h1>`, then `<h2>` for each section)
+- [x] Semantic page landmarks (`<header>`, `<nav>`, `<main>`, `<footer>`)
+- [x] Descriptive accessible name for primary navigation
+- [ ] Semantic sections and logical heading order as landing-page content is added
 - [ ] Meaningful `alt` text on all images
 - [ ] Every form control has an associated `<label>`
 - [ ] ARIA attributes on interactive elements (`aria-label`, `aria-describedby`, `aria-live`)
@@ -73,43 +68,3 @@ The layout was planned in Figma before coding: [Collectava Landing Page Skeleton
 | Database | _to be decided_ |
 
 _This table will be updated as each phase is built._
-
-## Project structure
-
-```
-collectava/
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-├── backend/        # added in phase 3
-├── docs/
-└── README.md
-```
-
-## Getting started
-
-### Frontend (current)
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/collectava.git
-   ```
-2. Open the frontend folder:
-   ```bash
-   cd collectava/frontend
-   ```
-3. Open `index.html` in your browser. No build step or dependencies are needed yet.
-
-### Backend
-
-_Setup instructions will be added when the backend is built._
-
-## Author
-
-**Fahad**, Full Stack Engineering course.
-
-## License
-
-This project is for educational purposes. The Collectava name and logo belong to their owner.
