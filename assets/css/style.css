@@ -132,6 +132,14 @@ textarea:focus-visible {
     padding: 56px max(40px, calc((100% - 1200px) / 2 + 40px));
 }
 
+.hero,
+.products,
+.testimonials,
+.newsletter,
+footer {
+    scroll-margin-top: 80px;
+}
+
 .hero_content {
     font-family: "Inter", Arial, sans-serif;
 }
@@ -142,7 +150,7 @@ textarea:focus-visible {
     line-height: 1.1;
 }
 
-.hero_content p:first-of-type {
+.hero_text {
     margin: 0 0 16px;
     color: var(--ink-muted);
     font-size: 1.125rem;
@@ -152,8 +160,9 @@ textarea:focus-visible {
 .hero_cta {
     box-sizing: border-box;
     display: flex;
-    width: 220px;
-    height: 44px;
+    width: fit-content;
+    min-height: 44px;
+    padding: 0 24px;
     border-radius: 8px;
     align-items: center;
     justify-content: center;
@@ -178,7 +187,7 @@ textarea:focus-visible {
     box-shadow: 0 16px 40px color-mix(in srgb, var(--dark) 18%, transparent);
 }
 
-.hero_content p:last-of-type {
+.hero_trust {
     margin: 20px 0 0;
     color: var(--ink-muted);
     font-size: 0.875rem;
