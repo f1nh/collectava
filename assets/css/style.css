@@ -1,20 +1,37 @@
+:root {
+    --bg: #eef2f6;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-muted: #4a4f5a;
+    --dark: #111318;
+    --darker: #0b0d11;
+    --on-dark-muted: #a9b0bc;
+    --tint: #e6f4f8;
+    --bg-gradient-end: #e3e7ee;
+    --border: #d9dce2;
+    --input-border: #6b7280;
+    --accent-bright: #19c2e6;
+    --accent-dark: #066982;
+    --error: #b3261e;
+    --success: #1b6e3c;
+}
+
 body {
-    background-color: #f4f5f7;
-    color: #1a1a1a;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", Arial, sans-serif;
     margin: 0;
 }
 
 .site-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--surface);
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
 }
 
-.site-header__inner {
+.site-header_inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,20 +75,33 @@ body {
 }
 
 .site-header nav a {
-    font-family: "Inter", Arial, sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    text-decoration: none;
     color: inherit;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.site-header nav a:hover, .site-header nav a:focus-visible {
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+    color: var(--accent-dark);
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
+a {
+    color: var(--accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-dark);
+    outline-offset: 2px;
+}
+
 @media (max-width: 640px) {
-    .site-header__inner {
+    .site-header_inner {
         flex-wrap: wrap;
         gap: 12px;
         padding: 16px;
@@ -83,5 +113,144 @@ body {
 
     .site-header nav ul {
         gap: 16px;
+    }
+}
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--tint) 0%,
+        var(--bg) 55%,
+        var(--bg-gradient-end) 100%
+    );
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    padding: 56px max(40px, calc((100% - 1200px) / 2 + 40px));
+}
+
+.hero_content {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.hero_content h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.hero_content p:first-of-type {
+    margin: 0 0 16px;
+    color: var(--ink-muted);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.hero_cta {
+    box-sizing: border-box;
+    display: flex;
+    width: 220px;
+    height: 44px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--surface);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+}
+
+.hero_cta:hover,
+.hero_cta:focus-visible {
+    background-color: var(--accent-dark);
+    color: var(--surface);
+}
+
+.hero_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px color-mix(in srgb, var(--dark) 18%, transparent);
+}
+
+.hero_content p:last-of-type {
+    margin: 20px 0 0;
+    color: var(--ink-muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--ink);
+}
+
+.products {
+    background-color: var(--bg);
+}
+
+.testimonials {
+    background-color: var(--tint);
+}
+
+.newsletter {
+    background-color: var(--dark);
+    color: var(--surface);
+}
+
+.newsletter .hint,
+.newsletter p {
+    color: var(--on-dark-muted);
+}
+
+.newsletter a {
+    color: var(--accent-bright);
+}
+
+footer {
+    background-color: var(--darker);
+    color: var(--surface);
+}
+
+footer a {
+    color: var(--accent-bright);
+}
+
+input,
+select,
+textarea {
+    box-sizing: border-box;
+    min-height: 44px;
+    border: 2px solid var(--input-border);
+    color: var(--ink);
+    background-color: var(--surface);
+    font: inherit;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--accent-dark);
+}
+
+.message_error {
+    color: var(--error);
+}
+
+.message_success {
+    color: var(--success);
+}
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 16px;
     }
 }
