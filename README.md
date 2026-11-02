@@ -23,8 +23,10 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 - Responsive header layout that places navigation on a second row on small screens
 - Sticky header styling and Google Fonts (Chakra Petch and Inter)
 - Semantic navigation landmark with a descriptive accessible name
-- Hero section with a headline, subheading, call-to-action link, trust line, and hero image
-- Responsive hero layout: two columns on desktop, one column on small screens
+- Responsive dark hero banner with an eyebrow, headline, subheading, cobalt call-to-action, and PC image blended into the background
+- Four-item feature strip highlighting build customization, testing, warranty, and support
+- Feature-strip icons for customization, testing, warranty, and support
+- Hero image overlay on desktop, stacked below the content on small screens
 - Color palette defined as CSS variables, with section backgrounds for depth
 
 ### Planned
@@ -77,8 +79,11 @@ All colors are defined once as CSS variables in `:root` and reused across the st
 | Secondary text | `#4a4f5a` | Descriptions and hints |
 | Dark | `#111318` | Buttons and newsletter band |
 | Darker | `#0b0d11` | Footer |
-| Dark cyan | `#066982` | Links, hover, and focus on light backgrounds |
+| Dark cyan | `#066982` | Links and focus on light backgrounds |
 | Bright cyan | `#19c2e6` | Highlights on dark backgrounds only |
+| Cobalt blue | `#2452e8` | Primary actions, navigation hover, and feature icons |
+| Cobalt hover | `#2047d4` | Primary action hover |
+| Hero label | `#9bb7ff` | Eyebrow text on the dark hero |
 
 ### Fonts
 
