@@ -284,14 +284,28 @@ footer {
 .hero_image {
     position: absolute;
     top: 0;
-    right: 0;
+    right: clamp(88px, 11vw, 136px);
     z-index: 0;
     width: 64%;
+    max-width: 1024px;
     height: 100%;
     object-fit: cover;
     object-position: right center;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38%);
-    mask-image: linear-gradient(90deg, transparent 0%, #000 38%);
+    filter: brightness(0.9) saturate(1.1);
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 38%,
+        #000 92%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 38%,
+        #000 92%,
+        transparent 100%
+    );
 }
 
 .feature-strip {
@@ -382,6 +396,8 @@ footer {
         width: 100%;
         height: auto;
         border-radius: 16px;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 
     .hero_content h1 {
@@ -420,6 +436,20 @@ footer {
 .products_inner {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (min-width: 1600px) {
+    .site-header_inner,
+    .hero_inner,
+    .feature-strip_list,
+    .products_inner {
+        max-width: min(1440px, 75vw);
+    }
+
+    .hero_image {
+        right: max(136px, calc((100vw - 1440px) / 2));
+        max-width: 1024px;
+    }
 }
 
 .products_header {
