@@ -10,7 +10,7 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, styling, and accessibility (header, hero, feature strip, and products done; testimonials, newsletter, and footer next) | In progress |
+| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, and featured products implemented; remaining page sections are in progress) | In progress |
 | 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
@@ -19,20 +19,22 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 ### Implemented
 
-- Semantic header with a logo icon, the Collectava brand name, and primary navigation
-- Responsive header layout that places navigation on a second row on small screens
+- Sticky header with the Collectava logo and primary navigation
+- Responsive mobile navigation menu with keyboard dismissal
 - Sticky header styling and Google Fonts (Chakra Petch and Inter)
 - Semantic navigation landmark with a descriptive accessible name
-- Responsive dark hero banner with an eyebrow, headline, subheading, cobalt call-to-action, and PC image blended into the background
+- Responsive dark hero banner with an eyebrow, headline, balanced subheading, call-to-action, and PC image
+- Desktop hero image blending with the page background; stacked image layout on small screens
+- Fluid content width up to 1440px on wide displays, with the hero image capped to preserve its proportions
 - Four-item feature strip highlighting build customization, testing, warranty, and support
 - Feature-strip icons for customization, testing, warranty, and support
-- Hero image overlay on desktop, stacked below the content on small screens
-- Responsive featured builds and services grid with four product cards and custom SVG illustrations
-- Color palette defined as CSS variables, with section backgrounds for depth
+- Responsive featured builds and services grid with four product cards and SVG illustrations
+- Product badges, lazy-loaded product images, and hover/focus treatments for links
+- Dark color palette defined as CSS variables
 
 ### Planned
 
-- Landing-page sections for testimonials, newsletter signup, and footer content
+- Remaining landing-page content for reviews, contact, newsletter signup, and footer
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
 - _More features to be decided as the project grows_
@@ -45,23 +47,17 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 - [x] Hero call-to-action keeps a 44px minimum target size and grows with larger text
 - [x] Visible `:focus-visible` outlines defined for links, buttons, and form fields
 - [x] Color palette chosen with text contrast of at least 4.5:1
-- [ ] Semantic sections and logical heading order as landing-page content is added
+- [x] Semantic sections and logical heading order for implemented content
 - [x] Meaningful `alt` text on informative hero and product images; decorative icons use empty alt text
-- [ ] Every form control has an associated `<label>`
-- [ ] ARIA attributes on interactive elements (`aria-label`, `aria-describedby`, `aria-live`)
-- [ ] Fully usable with a keyboard only, with clearly visible focus styles
+- [ ] Every form control has an associated `<label>` (no forms are implemented yet)
+- [x] ARIA attributes for the mobile menu and decorative icons
+- [x] Implemented navigation and links are keyboard accessible with visible focus styles
 - [ ] Text color contrast of at least 4.5:1 confirmed with Lighthouse, axe, and WAVE
 - [ ] Rating shown as text (for example, "5 out of 5 stars"), not only as icons
 
 ### Accessibility testing
 
-| Tool | What it checks | Result |
-|---|---|---|
-| Lighthouse (Chrome DevTools) | Automated accessibility audit | _add score_ |
-| axe DevTools | WCAG issues in the page | _add result_ |
-| WAVE | Structure, labels, and contrast | _add result_ |
-| Keyboard-only test | Tab, Shift+Tab, Enter, Space | _add notes_ |
-| Screen reader (NVDA) | Reading order and labels | _add notes_ |
+Keyboard focus and responsive layouts have been manually checked in a browser. Automated accessibility audits and screen-reader testing have not yet been recorded.
 
 ## Design
 
@@ -73,18 +69,16 @@ All colors are defined once as CSS variables in `:root` and reused across the st
 
 | Role | Color | Used for |
 |---|---|---|
-| Page background | `#eef2f6` | Body and product section |
-| Tint | `#e6f4f8` | Testimonials and hero gradient |
-| Surface | `#ffffff` | Header and cards |
-| Main text | `#1a1a1a` | Headings and body text |
-| Secondary text | `#4a4f5a` | Descriptions and hints |
-| Dark | `#111318` | Buttons and newsletter band |
-| Darker | `#0b0d11` | Footer |
-| Dark cyan | `#066982` | Links and focus on light backgrounds |
-| Bright cyan | `#19c2e6` | Highlights on dark backgrounds only |
-| Cobalt blue | `#2452e8` | Primary actions, navigation hover, and feature icons |
-| Cobalt hover | `#2047d4` | Primary action hover |
-| Hero label | `#9bb7ff` | Eyebrow text on the dark hero |
+| Page background | `#090c14` | Page and section backgrounds |
+| Surface | `#151b28` | Header and cards |
+| Raised surface | `#1c2440` | Icon backgrounds and secondary surfaces |
+| Main text | `#f3f6ff` | Headings and body text |
+| Muted text | `#9aa6c2` | Supporting descriptions |
+| Blue | `#6b83c8` | Primary actions and product badge |
+| Deep blue | `#37457c` | Borders and accents |
+| Highlight | `#a3c5ff` | Links, logo, and feature icons |
+| Violet | `#8b7cff` | Glow accents |
+| Border | `#2b3560` | Card and component borders |
 
 ### Fonts
 
@@ -95,7 +89,7 @@ All colors are defined once as CSS variables in `:root` and reused across the st
 
 | Layer | Technology |
 |---|---|
-| Frontend | HTML5, CSS3 with custom properties (JavaScript in a later phase) |
+| Frontend | HTML5, CSS3 with custom properties, and JavaScript for responsive navigation |
 | Backend | _to be decided_ |
 | Database | _to be decided_ |
 
