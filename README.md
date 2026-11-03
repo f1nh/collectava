@@ -10,7 +10,7 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, styling, and accessibility (header and hero done; products, testimonials, newsletter, and footer next) | In progress |
+| 1 | Landing page: semantic HTML, styling, and accessibility (header, hero, feature strip, and products done; testimonials, newsletter, and footer next) | In progress |
 | 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
@@ -27,11 +27,12 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 - Four-item feature strip highlighting build customization, testing, warranty, and support
 - Feature-strip icons for customization, testing, warranty, and support
 - Hero image overlay on desktop, stacked below the content on small screens
+- Responsive featured builds and services grid with four product cards and custom SVG illustrations
 - Color palette defined as CSS variables, with section backgrounds for depth
 
 ### Planned
 
-- Landing-page sections for the product showcase, testimonials, newsletter signup, and footer content
+- Landing-page sections for testimonials, newsletter signup, and footer content
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
 - _More features to be decided as the project grows_
@@ -45,7 +46,7 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 - [x] Visible `:focus-visible` outlines defined for links, buttons, and form fields
 - [x] Color palette chosen with text contrast of at least 4.5:1
 - [ ] Semantic sections and logical heading order as landing-page content is added
-- [ ] Meaningful `alt` text on all images (hero done; product images next)
+- [x] Meaningful `alt` text on informative hero and product images; decorative icons use empty alt text
 - [ ] Every form control has an associated `<label>`
 - [ ] ARIA attributes on interactive elements (`aria-label`, `aria-describedby`, `aria-live`)
 - [ ] Fully usable with a keyboard only, with clearly visible focus styles
