@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="544" viewBox="0 0 800 544" role="img" aria-labelledby="title desc">
+  <title id="title">PC deep cleaning</title>
+  <desc id="desc">An open PC being carefully cleaned with a soft brush and compressed-air can.</desc>
+  <defs>
+    <radialGradient id="blue-glow">
+      <stop stop-color="#6B83C8" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#090C14" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet-glow">
+      <stop stop-color="#8B7CFF" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#090C14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="case" x1="218" y1="120" x2="554" y2="439" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C2440"/>
+      <stop offset="1" stop-color="#151B28"/>
+    </linearGradient>
+    <filter id="shadow" x="147" y="429" width="506" height="80" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+  </defs>
+  <path fill="#090C14" d="M0 0h800v544H0z"/>
+  <ellipse cx="390" cy="262" fill="url(#blue-glow)" rx="345" ry="255"/>
+  <ellipse cx="746" cy="66" fill="url(#violet-glow)" rx="150" ry="128"/>
+  <ellipse cx="400" cy="466" fill="#090C14" fill-opacity=".75" rx="240" ry="20" filter="url(#shadow)"/>
+  <path fill="url(#case)" stroke="#37457C" stroke-width="3" d="M201 116h352v332H201z"/>
+  <path fill="#090C14" stroke="#6B83C8" stroke-opacity=".7" stroke-width="3" d="M225 140h302v284H225z"/>
+  <path fill="#1C2440" d="M242 158h266v250H242z"/>
+  <path fill="#151B28" stroke="#37457C" stroke-width="3" d="M267 181h147v198H267z"/>
+  <circle cx="340" cy="248" r="39" fill="#090C14" stroke="#6B83C8" stroke-width="7"/>
+  <circle cx="340" cy="248" r="11" fill="#A3C5FF"/>
+  <path fill="#6B83C8" d="M331 205h18v28h-18zM331 263h18v28h-18zM297 239h28v18h-28zM355 239h28v18h-28z"/>
+  <path fill="#37457C" d="M433 185h18v104h-18zM462 185h18v104h-18z"/>
+  <path fill="#A3C5FF" d="M433 185h18v8h-18zM462 185h18v8h-18z"/>
+  <path fill="#151B28" stroke="#37457C" stroke-width="3" d="M277 317h207v50H277z"/>
+  <circle cx="325" cy="342" r="14" fill="#090C14" stroke="#6B83C8" stroke-width="4"/>
+  <circle cx="430" cy="342" r="14" fill="#090C14" stroke="#6B83C8" stroke-width="4"/>
+  <path fill="#6B83C8" d="M225 420h302v4H225z"/>
+  <path fill="#090C14" d="M220 448h22v18h-22zM511 448h22v18h-22z"/>
+  <path fill="#37457C" d="m124 146 31 16 81 123-29 19-86-127 3-31Z"/>
+  <path fill="#6B83C8" d="m107 130 44 23-19 35-44-23 19-35Z"/>
+  <path fill="#A3C5FF" d="m113 136 25 13-7 12-25-13 7-12Z"/>
+  <path fill="#9AA6C2" d="m211 284 31-20 18 23-33 23-16-26Z"/>
+  <path fill="#151B28" d="m472 96 53 5-15 162-53-5 15-162Z"/>
+  <path fill="#37457C" d="m472 96 53 5-4 27-53-5 4-27Z"/>
+  <path fill="#6B83C8" d="m464 258 53 5-2 17-53-5 2-17Z"/>
+  <path fill="#151B28" d="m487 280 45 4-2 37-45-4 2-37Z"/>
+  <path fill="#9AA6C2" d="m523 285 16 2-1 14-16-2 1-14Z"/>
+  <path fill="#9AA6C2" d="m470 307 54 5 36 42-16 20-60-26-14-41Z"/>
+  <path fill="#6B83C8" d="m511 359 36 15 24-5 13 14-28 15-55-20 10-19Z"/>
+  <path stroke="#A3C5FF" stroke-opacity=".85" stroke-width="4" d="m522 151 72 8M520 171l93 10M518 191l75 8"/>
+  <circle cx="596" cy="126" r="5" fill="#A3C5FF"/>
+  <circle cx="625" cy="144" r="4" fill="#9AA6C2"/>
+  <circle cx="601" cy="205" r="5" fill="#6B83C8"/>
+  <circle cx="641" cy="216" r="3" fill="#A3C5FF"/>
+  <circle cx="579" cy="235" r="4" fill="#9AA6C2"/>
+</svg>
