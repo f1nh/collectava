@@ -447,6 +447,7 @@ footer {
 .products_grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
     gap: 24px;
 }
 
