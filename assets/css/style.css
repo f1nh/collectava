@@ -17,7 +17,7 @@
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: "Inter", Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
 }
 
@@ -46,12 +46,13 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
     color: var(--highlight);
     text-decoration: none;
 }
 
 .brand span {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     font-weight: 600;
     font-style: italic;
     font-size: 1.375rem;
@@ -86,7 +87,7 @@ body {
     text-underline-offset: 4px;
 }
 
-.site-header nav a[aria-current="page"] {
+.site-header nav a[aria-current='page'] {
     color: var(--highlight);
 }
 
@@ -108,6 +109,10 @@ textarea:focus-visible {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 16px;
+    }
+
+    .brand span {
+        overflow-wrap: anywhere;
     }
 
     .site-header_menu {
@@ -154,7 +159,11 @@ textarea:focus-visible {
     background:
         radial-gradient(ellipse at 78% 45%, var(--glow-blue), transparent 38%),
         radial-gradient(ellipse at 94% 8%, var(--glow-violet), transparent 28%),
-        radial-gradient(ellipse at 12% 100%, rgb(139 124 255 / 5%), transparent 28%),
+        radial-gradient(
+            ellipse at 12% 100%,
+            rgb(139 124 255 / 5%),
+            transparent 28%
+        ),
         var(--bg);
     color: var(--text);
     scroll-margin-top: 80px;
@@ -179,8 +188,13 @@ textarea:focus-visible {
     right: 0;
     width: 68%;
     height: 100%;
-    background: linear-gradient(90deg, var(--bg), rgb(9 12 20 / 75%) 25%, transparent 85%);
-    content: "";
+    background: linear-gradient(
+        90deg,
+        var(--bg),
+        rgb(9 12 20 / 75%) 25%,
+        transparent 85%
+    );
+    content: '';
     pointer-events: none;
     z-index: 1;
 }
@@ -243,7 +257,6 @@ footer {
     color: var(--bg);
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .hero_cta:hover {
@@ -289,6 +302,12 @@ footer {
     display: flex;
     align-items: center;
     gap: 16px;
+    min-width: 0;
+}
+
+.feature-item > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .feature-icon {
@@ -305,7 +324,8 @@ footer {
     display: block;
     width: 24px;
     height: 24px;
-    filter: brightness(0) saturate(100%) invert(80%) sepia(17%) saturate(1017%) hue-rotate(188deg) brightness(101%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(80%) sepia(17%) saturate(1017%)
+        hue-rotate(188deg) brightness(101%) contrast(102%);
 }
 
 .feature-item_title {
@@ -533,6 +553,7 @@ footer {
     .hero_cta {
         width: 100%;
         padding: 0 12px;
+        overflow-wrap: anywhere;
     }
 
     .product-card_link {
