@@ -56,6 +56,7 @@ body {
     font-weight: 600;
     font-style: italic;
     font-size: 1.375rem;
+    text-shadow: 0 0 16px var(--glow-blue);
 }
 
 .brand img {
@@ -63,6 +64,7 @@ body {
     width: auto;
     height: 48px;
     object-fit: contain;
+    filter: drop-shadow(0 0 10px var(--glow-blue));
 }
 
 .site-header nav ul {
