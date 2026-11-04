@@ -442,7 +442,8 @@ footer {
     .site-header_inner,
     .hero_inner,
     .feature-strip_list,
-    .products_inner {
+    .products_inner,
+    .contact-cta_inner {
         max-width: min(1440px, 75vw);
     }
 
@@ -629,10 +630,113 @@ footer {
 
 @media (prefers-reduced-motion: no-preference) {
     .hero_cta,
-    .product-card_link {
+    .product-card_link,
+    .contact-cta_button {
         transition:
             background-color 180ms ease,
             box-shadow 180ms ease,
             transform 180ms ease;
+    }
+}
+
+.contact-cta {
+    padding: 40px;
+    scroll-margin-top: 80px;
+}
+
+.contact-cta_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 32px;
+    border-radius: 12px;
+    background: linear-gradient(110deg, var(--surface-2), var(--blue-deep));
+    box-sizing: border-box;
+}
+
+.contact-cta_copy {
+    max-width: 640px;
+}
+
+.contact-cta_eyebrow {
+    margin: 0 0 8px;
+    color: var(--highlight);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-cta_copy h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.contact-cta_copy p:last-child {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.contact-cta_button {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 32px;
+    border: 1px solid rgb(163 197 255 / 45%);
+    border-radius: 999px;
+    background-color: var(--surface-2);
+    box-shadow: 0 0 16px var(--glow-blue);
+    color: var(--text);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-cta_button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(80%)
+        sepia(17%)
+        saturate(1017%)
+        hue-rotate(188deg)
+        brightness(101%)
+        contrast(102%)
+        drop-shadow(0 0 4px var(--glow-blue));
+}
+
+.contact-cta_button:hover {
+    background-color: #252f50;
+    border-color: var(--highlight);
+    box-shadow: 0 0 22px var(--glow-blue);
+}
+
+.contact-cta_button:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 639px) {
+    .contact-cta {
+        padding: 24px 16px;
+    }
+
+    .contact-cta_inner {
+        padding: 24px;
+    }
+
+    .contact-cta_button {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
