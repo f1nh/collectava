@@ -10,7 +10,7 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, and featured products implemented; remaining page sections are in progress) | In progress |
+| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, featured products, and WhatsApp contact CTA implemented; remaining page sections are in progress) | In progress |
 | 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
@@ -30,11 +30,12 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 - Feature-strip icons for customization, testing, warranty, and support
 - Responsive featured builds and services grid with four product cards and SVG illustrations
 - Product badges, lazy-loaded product images, and hover/focus treatments for links
+- Responsive contact banner with a WhatsApp build-advice link and prefilled message
 - Dark color palette defined as CSS variables
 
 ### Planned
 
-- Remaining landing-page content for reviews, contact, newsletter signup, and footer
+- Remaining landing-page content for reviews, promotional offer, newsletter signup, and footer
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
 - _More features to be decided as the project grows_
