@@ -28,6 +28,23 @@ body {
     z-index: 100;
     width: 100%;
     box-shadow: 0 2px 12px rgb(0 0 0 / 50%);
+    isolation: isolate;
+}
+
+.site-header::after {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: 140px;
+    background: radial-gradient(
+        ellipse at 50% 0,
+        rgb(107 131 200 / 22%),
+        transparent 70%
+    );
+    content: "";
+    pointer-events: none;
+    z-index: -1;
 }
 
 .site-header_inner {
