@@ -159,13 +159,14 @@ textarea:focus-visible {
         border: 0;
         border-radius: 8px;
         background: transparent;
-        color: var(--text);
+        color: var(--highlight);
         cursor: pointer;
     }
 
     .site-header_menu svg {
         width: 28px;
         height: 28px;
+        filter: drop-shadow(0 0 6px var(--glow-blue));
     }
 
     .site-header nav {
