@@ -1,16 +1,18 @@
 # Collectava
 
-A full stack ecommerce web app for **Collectava**, a custom PC building business. The project is being built step by step as part of a Full Stack Engineering course.
+A personal full stack learning project for **Collectava**, a custom PC storefront. The project is being built step by step as part of a Full Stack Engineering course. Products, prices, delivery times, and reviews are sample content.
+
+**Live demo:** [Collectava on GitHub Pages](https://f1nh.github.io/collectava/)
 
 ## About
 
-Collectava builds custom PCs and offers PC services. The goal of this project is to build the Collectava storefront step by step: first the frontend, then the backend, then connect them into one full stack app. Accessibility is a priority from the start, so the site works for everyone, including people who use a keyboard or a screen reader.
+The Collectava storefront showcases custom PCs and PC services. The goal of this project is to build it step by step: first the frontend, then the backend, then connect them into one full stack app. Accessibility is a priority from the start, so the site works for everyone, including people who use a keyboard or a screen reader.
 
 ## Project status
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, featured products, and WhatsApp contact CTA implemented; remaining page sections are in progress) | In progress |
+| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, featured products, and WhatsApp contact CTA implemented; remaining page sections are planned) | In progress |
 | 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
@@ -36,9 +38,11 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 ### Planned
 
 - Remaining landing-page content for reviews, promotional offer, newsletter signup, and footer
+- Real product photos and targets or pages for the "View details" links
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
-- _More features to be decided as the project grows_
+
+The Reviews navigation link and the product "View details" links do not have destinations yet.
 
 ## Accessibility
 
@@ -58,11 +62,13 @@ Collectava builds custom PCs and offers PC services. The goal of this project is
 
 ### Accessibility testing
 
-Keyboard focus and responsive layouts have been manually checked in a browser. Automated accessibility audits and screen-reader testing have not yet been recorded.
+Keyboard focus and responsive layouts have been partially checked in a browser. Full automated accessibility audits, browser-zoom testing, and screen-reader testing are still pending.
 
 ## Design
 
-The layout was planned in Figma before coding: [Collectava Landing Page Skeleton](https://www.figma.com/design/RjNEoN2M9H8UIMCI57TzFg).
+The frontend design specification is kept locally rather than in the repository. For sections already built, the code takes precedence if it disagrees; planned sections follow the spec.
+
+The layout was originally planned in [Figma](https://www.figma.com/design/RjNEoN2M9H8UIMCI57TzFg), but that design has not yet been updated to match the latest code.
 
 ### Colors
 
