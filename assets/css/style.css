@@ -94,13 +94,16 @@ body {
 }
 
 .site-header nav a {
-  display: inline-block;
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
   color: var(--highlight);
   font-weight: 500;
   text-decoration: none;
 }
 
-.site-header nav a:hover,
 .site-header nav a:focus-visible {
   color: var(--highlight);
   text-shadow: 0 0 8px var(--glow-blue);
@@ -135,6 +138,8 @@ textarea:focus-visible {
   }
 
   .site-header nav a:hover {
+    color: var(--highlight);
+    text-shadow: 0 0 8px var(--glow-blue);
     transform: translateY(-2px);
   }
 }
@@ -150,7 +155,7 @@ textarea:focus-visible {
     overflow-wrap: anywhere;
   }
 
-  .site-header_menu {
+  .site-header_menu:not([hidden]) {
     display: grid;
     flex: 0 0 48px;
     width: 48px;
@@ -191,8 +196,24 @@ textarea:focus-visible {
   }
 
   .site-header nav a {
-    display: block;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
     padding: 12px 8px;
+  }
+
+  .site-header_inner:has(.site-header_menu[hidden]) {
+    flex-wrap: wrap;
+  }
+
+  .site-header:has(.site-header_menu[hidden]) {
+    position: static;
+  }
+
+  .site-header_inner:has(.site-header_menu[hidden]) nav {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
   }
 
   .product-card_link {
@@ -205,7 +226,6 @@ textarea:focus-visible {
 
 .hero {
   position: relative;
-  height: 520px;
   overflow: hidden;
   background: var(--bg);
   color: var(--text);
@@ -214,8 +234,7 @@ textarea:focus-visible {
 
 .hero_inner {
   position: static;
-  height: 100%;
-  min-height: 0;
+  min-height: 520px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -298,15 +317,6 @@ footer {
   color: var(--bg);
   font-weight: 600;
   text-decoration: none;
-}
-
-.hero_cta:hover {
-  background-color: #7f95d6;
-  box-shadow: 0 0 30px var(--glow-blue);
-}
-
-.hero_cta:active {
-  transform: translateY(1px);
 }
 
 .hero_image {
@@ -399,12 +409,8 @@ footer {
 }
 
 @media (max-width: 1023px) {
-  .hero {
-    height: auto;
-  }
-
   .hero_inner {
-    height: auto;
+    min-height: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 32px;
@@ -497,20 +503,15 @@ footer {
 
 .products_header a {
   display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   flex: 0 0 auto;
   color: var(--highlight);
   font-weight: 600;
   text-decoration: none;
-}
-
-.products_header a:hover {
-  text-shadow: 0 0 8px var(--glow-blue);
-}
-
-.products_header a:hover .arrow-icon {
-  filter: drop-shadow(0 0 4px var(--glow-blue));
 }
 
 .products_grid {
@@ -600,15 +601,6 @@ footer {
   text-decoration: none;
 }
 
-.product-card_link:hover {
-  background-color: #7f95d6;
-  box-shadow: 0 0 30px var(--glow-blue);
-}
-
-.product-card_link:active {
-  transform: translateY(1px);
-}
-
 @media (max-width: 1023px) {
   .products_grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -663,6 +655,26 @@ footer {
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .products_header a:hover {
+    text-shadow: 0 0 8px var(--glow-blue);
+  }
+
+  .products_header a:hover .arrow-icon {
+    filter: drop-shadow(0 0 4px var(--glow-blue));
+  }
+
+  .hero_cta:hover,
+  .product-card_link:hover {
+    background-color: #7f95d6;
+    box-shadow: 0 0 30px var(--glow-blue);
+  }
+
+  .contact-cta_button:hover {
+    background-color: #252f50;
+    border-color: var(--highlight);
+    box-shadow: 0 0 22px var(--glow-blue);
+  }
+
   .product-card {
     transition:
       border-color 180ms ease,
@@ -685,6 +697,12 @@ footer {
       background-color 180ms ease,
       box-shadow 180ms ease,
       transform 180ms ease;
+  }
+
+  .hero_cta:active,
+  .product-card_link:active,
+  .contact-cta_button:active {
+    transform: translateY(1px);
   }
 }
 
@@ -726,7 +744,7 @@ footer {
 
 .contact-cta_copy p:last-child {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -756,16 +774,6 @@ footer {
   filter: brightness(0) saturate(100%) invert(80%) sepia(17%) saturate(1017%)
     hue-rotate(188deg) brightness(101%) contrast(102%)
     drop-shadow(0 0 4px var(--glow-blue));
-}
-
-.contact-cta_button:hover {
-  background-color: #252f50;
-  border-color: var(--highlight);
-  box-shadow: 0 0 22px var(--glow-blue);
-}
-
-.contact-cta_button:active {
-  transform: translateY(1px);
 }
 
 @media (max-width: 639px) {
