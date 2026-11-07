@@ -427,11 +427,25 @@ footer {
 
   .hero_image {
     position: static;
-    width: 100%;
+    width: calc(100% + 48px);
+    max-width: none;
     height: auto;
-    border-radius: 16px;
-    -webkit-mask-image: none;
-    mask-image: none;
+    margin: 0 -24px;
+    border-radius: 0;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 78%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 78%,
+      transparent 100%
+    );
   }
 
   .hero_content h1 {
@@ -619,27 +633,6 @@ footer {
 
   .products_grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero_image {
-    width: calc(100% + 48px);
-    max-width: none;
-    margin: 0 -24px;
-    border-radius: 0;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      #000 18%,
-      #000 78%,
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      #000 18%,
-      #000 78%,
-      transparent 100%
-    );
   }
 
   .hero_cta {
