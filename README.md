@@ -12,7 +12,7 @@ The Collectava storefront showcases custom PCs and PC services. The goal of this
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, featured products, and WhatsApp contact CTA implemented; remaining page sections are planned) | In progress |
+| 1 | Landing page: semantic HTML, responsive styling, and accessibility (header, hero, feature strip, featured products, WhatsApp contact CTA, and testimonials implemented; remaining page sections are planned) | In progress |
 | 2 | Frontend: interactive features and remaining landing-page sections | Planned |
 | 3 | Backend: server, API, database | Planned |
 | 4 | Full stack integration: connect frontend to backend (for example, newsletter signups and products) | Planned |
@@ -33,16 +33,17 @@ The Collectava storefront showcases custom PCs and PC services. The goal of this
 - Responsive featured builds and services grid with four product cards and SVG illustrations
 - Product badges, lazy-loaded product images, and hover/focus treatments for links
 - Responsive contact banner with a WhatsApp build-advice link and prefilled message
+- Responsive testimonials section with sample quotes and text ratings
 - Dark color palette defined as CSS variables
 
 ### Planned
 
-- Remaining landing-page content for reviews, promotional offer, newsletter signup, and footer
+- Remaining landing-page content for promotional offer, newsletter signup, and footer
 - Real product photos and targets or pages for the "View details" links
 - Products loaded from a backend API instead of hardcoded HTML
 - Newsletter signups saved to a database
 
-The Reviews navigation link and the product "View details" links do not have destinations yet.
+The product "View details" links do not have destinations yet.
 
 ## Accessibility
 
@@ -58,7 +59,7 @@ The Reviews navigation link and the product "View details" links do not have des
 - [x] ARIA attributes for the mobile menu and decorative icons
 - [x] Implemented navigation and links are keyboard accessible with visible focus styles
 - [ ] Text color contrast of at least 4.5:1 confirmed with Lighthouse, axe, and WAVE
-- [ ] Rating shown as text (for example, "5 out of 5 stars"), not only as icons
+- [x] Testimonial ratings are shown as text (for example, "5 out of 5 stars"), not only as icons
 
 ### Accessibility testing
 
